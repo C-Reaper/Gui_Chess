@@ -14,7 +14,7 @@ ChessFigure* selected;
 AudioPlayer ap;
 
 void Setup(AlxWindow* w){
-	AlxFont_Resize(&window.AlxFont,16,16);
+	AlxFont_Resize(&window.font,16,16);
 
 	tv = TransformedView_Make(
 		(Vec2){ GetWidth(),GetHeight() * 0.125f },
@@ -86,7 +86,7 @@ void Update(AlxWindow* w){
 	}
 
 	String str = String_Format("S:%f,%f",tv.Scale.x,tv.Scale.y);
-	CStr_RenderSizeAlxFont(WINDOW_STD_ARGS,&window.AlxFont,str.Memory,str.size,0.0f,0.0f,WHITE);
+	CStr_RenderSizeAlxFont(WINDOW_STD_ARGS,&window.font,str.Memory,str.size,0.0f,0.0f,WHITE);
 	String_Free(&str);
 }
 void Delete(AlxWindow* w){
