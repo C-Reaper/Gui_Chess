@@ -95,7 +95,7 @@ void Delete(AlxWindow* w){
 }
 
 int main(){
-    if(Create("Mario",1200,1200,1,1,Setup,Update,Delete))
+    if(Create("Chess",1200,1200,1,1,Setup,Update,Delete))
         Start();
     return 0;
 }
